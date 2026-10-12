@@ -15,7 +15,7 @@ window.APEX = {
 
   /* ───────── 1. THÔNG TIN SITE ───────── */
   site: {
-    brand: "Apex",                       // chữ cạnh logo trên thanh menu & tiêu đề tab
+    brand: "THÁI SUDO",                       // chữ cạnh logo trên thanh menu & tiêu đề tab
     description: "Portfolio cá nhân: dự án, kỹ năng, CV và góc học tập.",
     sampleNotice: true,                  // true = hiện thanh nhắc "nội dung mẫu"; sửa xong hãy đổi thành false
     studio: true,                        // true = cho phép bảng chỉnh nhanh (Ctrl+Shift+E hoặc thêm ?edit=1 vào link)
