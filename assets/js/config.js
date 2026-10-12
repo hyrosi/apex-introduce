@@ -47,7 +47,7 @@ window.APEX = {
     location: "Việt Nam",
     email: "ban@example.com",            // ← ĐỔI EMAIL
     phone: "",                           // để trống nếu không muốn hiện
-    avatar: "assets/img/avatar-me.jpg",     // ← ẢNH ĐẠI DIỆN: thả file vào assets/img/ rồi đổi tên file tại đây (vd "assets/img/toi.jpg")
+    avatar: "assets/img/avatar.svg",     // ← ẢNH ĐẠI DIỆN: thả file vào assets/img/ rồi đổi tên file tại đây (vd "assets/img/toi.jpg")
     // avatarPosition: "50% 30%",          // (tuỳ chọn) tự canh tay vị trí ảnh đại diện; bỏ trống = tự động căn chủ thể vào giữa
     heroImage: "assets/img/hero-cosmos.jpg",   // ảnh nền trang chủ
     aboutImage: "assets/img/workspace.jpg",    // ảnh ở trang Giới thiệu
