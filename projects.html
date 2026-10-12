@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dự án</title>
+<meta name="description" content="Các dự án tiêu biểu.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="Dự án"><meta property="og:description" content="Các dự án tiêu biểu."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="projects" data-title="Dự án">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head"><div class="wrap"><span class="kicker reveal">// dự án</span><h1 class="reveal" style="--d:.05s">Dự án <span class="grad">tiêu biểu</span></h1><p class="reveal" style="--d:.1s">Lọc theo danh mục, tìm kiếm không cần gõ dấu, bấm vào thẻ để xem chi tiết (có thể dùng phím ← → trong cửa sổ chi tiết).</p></div></section>
+<section class="sec sec--tight"><div class="wrap">
+  <div class="toolbar"><div class="chips" id="pchips" role="group" aria-label="Lọc theo danh mục"></div><div class="row" style="gap:14px"><span class="mono muted" id="pcount" aria-live="polite" style="font-size:.8rem"></span><label class="searchbox"><span class="sr">Tìm dự án</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input class="input" id="pq" type="search" placeholder="Tìm dự án, công nghệ…" autocomplete="off"></label></div></div>
+  <div class="pgrid" id="pgrid"></div>
+</div></section>
+<section class="sec sec--tight"><div class="wrap"><div class="card cta reveal"><h2>Cùng tạo ra điều gì đó <span class="grad">tuyệt vời</span>?</h2><p>Có ý tưởng, dự án hay cơ hội hợp tác? Nhắn cho mình — mình luôn sẵn lòng lắng nghe.</p><div class="row"><a class="btn btn--primary" href="contact.html">Liên hệ ngay</a><a class="btn btn--ghost" href="projects.html">Xem dự án</a></div></div></div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

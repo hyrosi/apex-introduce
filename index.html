@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Apex — Portfolio</title>
+<meta name="description" content="Portfolio cá nhân: dự án, kỹ năng, CV và góc học tập.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="Apex — Portfolio"><meta property="og:description" content="Portfolio cá nhân: dự án, kỹ năng, CV và góc học tập."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home" data-title="">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<section class="hero" id="top">
+  <div class="hero__bg" data-bg="profile.heroImage" aria-hidden="true"></div>
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="pill reveal"><span class="dot"></span><span data-t="profile.status"></span></p>
+      <h1 class="hero__name reveal" style="--d:.05s"><span class="hero__hi" data-t="profile.greeting"></span><span class="grad" data-t="profile.name"></span></h1>
+      <p class="hero__role reveal" style="--d:.1s"><span class="gt">&gt;</span><span data-typed></span><span class="caret" aria-hidden="true"></span></p>
+      <p class="hero__tag reveal" style="--d:.15s" data-t="profile.tagline"></p>
+      <div class="row reveal" style="--d:.2s"><a class="btn btn--primary" href="projects.html">Khám phá dự án <span aria-hidden="true">↗</span></a><a class="btn btn--ghost" href="cv.html">Xem CV</a><a class="btn btn--ghost" href="contact.html">Liên hệ</a></div>
+      <div class="hero__social reveal" style="--d:.25s" data-render="socials"></div>
+    </div>
+    <div class="hero__stage reveal" style="--d:.15s">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="avatar"><div class="avatar__img"><img data-src="profile.avatar" data-fallback="avatar" alt="Ảnh đại diện" width="400" height="400" decoding="async"></div></div>
+      <span class="float f1" data-t="profile.floaters.0"></span><span class="float f2" data-t="profile.floaters.1"></span><span class="float f3" data-t="profile.floaters.2"></span>
+    </div>
+  </div>
+  <a class="scroll-hint" href="#about-teaser" aria-label="Cuộn xuống">cuộn<i></i></a>
+</section>
+
+<div data-render="marquee"></div>
+
+<section class="sec" id="about-teaser">
+  <div class="wrap split">
+    <div>
+      <div class="sec__head reveal"><span class="kicker">// giới thiệu</span><h2>Mình là ai?</h2></div>
+      <div class="prose reveal" data-anim="left" data-render="aboutText" data-limit="2"></div>
+      <div class="row reveal" style="margin-top:1.4rem"><a class="btn btn--primary btn--sm" href="about.html">Câu chuyện của mình</a><a class="btn btn--ghost btn--sm" href="skills.html">Xem kỹ năng</a></div>
+    </div>
+    <div class="grid g2" data-render="stats"></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head reveal"><span class="kicker">// dự án nổi bật</span><h2>Những thứ mình đã xây</h2><p>Di chuột lên thẻ để thấy hiệu ứng nghiêng 3D. Bấm vào để xem chi tiết.</p></div>
+    <div class="pgrid" data-render="projects" data-featured data-limit="3"></div>
+    <div class="center reveal" style="margin-top:34px"><a class="btn btn--ghost" href="projects.html">Xem tất cả dự án →</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div>
+      <div class="sec__head reveal"><span class="kicker">// kỹ năng</span><h2>Bộ công cụ của mình</h2><p>Kéo để xoay quả cầu 3D, rê chuột để nghiêng theo. Bạn có thể xem chi tiết từng mức độ ở trang Kỹ năng.</p></div>
+      <div class="row reveal"><a class="btn btn--primary btn--sm" href="skills.html">Xem chi tiết kỹ năng</a></div>
+    </div>
+    <div data-render="sphere" data-max="26"></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head reveal"><span class="kicker">// phòng thí nghiệm 3D</span><h2>Chơi với mô hình 3D</h2><p>Bốn mô hình tự dựng bằng Canvas, không cần thư viện. Kéo, xoay, rê chuột để tương tác.</p></div>
+    <div data-render="lab"></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head sec__head--c reveal"><span class="kicker">// đánh giá</span><h2>Mọi người nói gì</h2></div>
+    <div data-render="reviews"></div>
+  </div>
+</section>
+<section class="sec sec--tight"><div class="wrap"><div class="card cta reveal" data-anim="zoom"><h2>Cùng tạo ra điều gì đó <span class="grad">tuyệt vời</span>?</h2><p>Có ý tưởng, dự án hay cơ hội hợp tác? Nhắn cho mình — mình luôn sẵn lòng lắng nghe.</p><div class="row"><a class="btn btn--primary" href="contact.html">Liên hệ ngay</a><a class="btn btn--ghost" href="projects.html">Xem dự án</a></div></div></div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

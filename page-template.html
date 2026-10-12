@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Trang mới (mẫu)</title>
+<meta name="description" content="Trang mẫu để nhân bản.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="Trang mới (mẫu)"><meta property="og:description" content="Trang mẫu để nhân bản."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="template" data-title="Trang mới">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<!-- ═══════════ TRANG MẪU ═══════════
+     Cách thêm trang mới: (1) copy file này, đổi tên vd  chung-chi.html
+     (2) sửa  data-title  ở thẻ <body> phía trên  (3) sửa nội dung bên dưới
+     (4) thêm 1 dòng vào  nav  trong assets/js/config.js:  { id:"chung-chi", label:"Chứng chỉ", href:"chung-chi.html" }
+     (5) đổi  data-page  của <body> thành đúng id đó để menu sáng đúng mục.
+     Các class có sẵn: .sec .wrap .card .pad .grid .g2 .g3 .btn .chip .tags .reveal ... -->
+<section class="page-head"><div class="wrap"><span class="kicker reveal">// trang mới</span><h1 class="reveal" style="--d:.05s">Tiêu đề <span class="grad">trang mới</span></h1><p class="reveal" style="--d:.1s">Đây là trang mẫu. Sao chép file này để tạo trang riêng của bạn.</p></div></section>
+<section class="sec sec--tight"><div class="wrap">
+  <div class="grid g3" data-stagger>
+    <article class="card pad tilt" data-tilt="8"><h3>Khối nội dung 1</h3><p class="muted">Viết gì đó ở đây. Thẻ này có hiệu ứng nghiêng 3D.</p></article>
+    <article class="card pad tilt" data-tilt="8"><h3>Khối nội dung 2</h3><p class="muted">Bạn có thể dùng dữ liệu từ config.js bằng thuộc tính data-t="profile.name".</p></article>
+    <article class="card pad tilt" data-tilt="8"><h3>Khối nội dung 3</h3><p class="muted">Xin chào <b data-t="profile.name"></b>!</p></article>
+  </div>
+</div></section>
+<section class="sec sec--tight"><div class="wrap"><div class="card cta reveal"><h2>Cùng tạo ra điều gì đó <span class="grad">tuyệt vời</span>?</h2><p>Có ý tưởng, dự án hay cơ hội hợp tác? Nhắn cho mình — mình luôn sẵn lòng lắng nghe.</p><div class="row"><a class="btn btn--primary" href="contact.html">Liên hệ ngay</a><a class="btn btn--ghost" href="projects.html">Xem dự án</a></div></div></div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

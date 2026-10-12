@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Góc học tập</title>
+<meta name="description" content="Lập kế hoạch học, checklist, Pomodoro và nhật ký tập trung.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="Góc học tập"><meta property="og:description" content="Lập kế hoạch học, checklist, Pomodoro và nhật ký tập trung."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="learning" data-title="Học tập">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head"><div class="wrap"><span class="kicker reveal">// học tập</span><h1 class="reveal" style="--d:.05s">Góc <span class="grad">học tập</span></h1><p class="reveal" style="--d:.1s">Công cụ chạy ngay trên trình duyệt của bạn. Dữ liệu chỉ lưu trong máy này, không gửi đi đâu.</p></div></section>
+<section class="sec sec--tight"><div class="wrap">
+  <div class="grid g2" style="align-items:start">
+    <div class="card pad reveal"><span class="kicker">// kế hoạch</span><h2 style="font-size:1.6rem;margin:.6rem 0 1rem">Tạo lộ trình học</h2>
+      <form id="planForm" class="grid" style="gap:12px" novalidate>
+        <div class="field"><label for="goal">Mục tiêu học</label><input class="input" id="goal" name="goal" placeholder="VD: JavaScript cơ bản" required></div>
+        <div class="grid g3" style="gap:10px"><div class="field"><label for="days">Số ngày</label><select class="input" id="days" name="days"><option value="7">7 ngày</option><option value="14" selected>14 ngày</option><option value="30">30 ngày</option></select></div>
+        <div class="field"><label for="hours">Giờ/ngày</label><select class="input" id="hours" name="hours"><option value="1">1 giờ</option><option value="2" selected>2 giờ</option><option value="3">3 giờ</option></select></div>
+        <div class="field"><label for="level">Trình độ</label><select class="input" id="level" name="level"><option value="new">Mới bắt đầu</option><option value="mid" selected>Có nền tảng</option><option value="adv">Nâng cao</option></select></div></div>
+        <button class="btn btn--primary" type="submit">Tạo kế hoạch</button></form>
+      <div class="out" id="planOut" aria-live="polite">Nhập mục tiêu rồi bấm “Tạo kế hoạch”.</div>
+      <div class="row" id="planActs" hidden style="margin-top:12px"><button class="btn btn--ghost btn--sm" id="planAdd" type="button">Thêm vào checklist</button><button class="btn btn--ghost btn--sm" id="planCopy" type="button">Sao chép</button></div>
+      <p class="note">Kế hoạch được sinh theo mẫu có sẵn ngay trên trình duyệt (không phải mô hình AI trực tuyến và không gửi dữ liệu đi).</p></div>
+    <div class="card pad reveal"><span class="kicker">// checklist</span><h2 style="font-size:1.6rem;margin:.6rem 0 .4rem">Việc cần làm</h2>
+      <div class="prog" aria-hidden="true"><i id="todoBar"></i></div><div class="mono muted" id="todoPct" style="font-size:.78rem" aria-live="polite"></div>
+      <form id="todoForm" class="row" style="margin-top:14px;flex-wrap:nowrap"><label class="sr" for="todoIn">Thêm việc</label><input class="input" id="todoIn" placeholder="Thêm việc mới…" autocomplete="off"><button class="btn btn--primary btn--sm" type="submit" aria-label="Thêm">+ Thêm</button></form>
+      <ul class="todo" id="todoList"></ul>
+      <div class="row" style="margin-top:14px"><button class="btn btn--ghost btn--sm" id="todoClear" type="button">Xoá mục đã xong</button></div></div>
+  </div>
+</div></section>
+<section class="sec sec--tight"><div class="wrap"><div class="grid g2" style="align-items:start">
+  <div class="card pad reveal"><span class="kicker">// pomodoro</span><h2 style="font-size:1.6rem;margin:.6rem 0 1rem">Tập trung theo phiên</h2>
+    <div class="pomo">
+      <div class="tabs" style="margin:0" role="group" aria-label="Chế độ"><button type="button" class="chip on" data-mode="focus" aria-pressed="true">Tập trung 25′</button><button type="button" class="chip" data-mode="short" aria-pressed="false">Nghỉ 5′</button><button type="button" class="chip" data-mode="long" aria-pressed="false">Nghỉ dài 15′</button></div>
+      <div class="pomo__ring"><svg viewBox="0 0 220 220" aria-hidden="true"><defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--a)"/><stop offset="1" stop-color="var(--c)"/></linearGradient></defs><circle class="bg" cx="110" cy="110" r="100"/><circle class="fg" id="pomoFg" cx="110" cy="110" r="100"/></svg><div class="pomo__time"><b id="pomoTime" role="timer">25:00</b><small id="pomoLbl">Tập trung</small></div></div>
+      <div class="row"><button class="btn btn--primary" id="pomoGo" type="button"></button><button class="btn btn--ghost" id="pomoReset" type="button" aria-label="Đặt lại">↺ Đặt lại</button></div>
+    </div></div>
+  <div class="card pad reveal"><span class="kicker">// nhật ký</span><h2 style="font-size:1.6rem;margin:.6rem 0 1rem">Chuỗi ngày tập trung</h2><div class="heat" id="heat" aria-label="Biểu đồ nhiệt 20 tuần"></div><div class="mono muted" id="focusStats" style="font-size:.78rem;margin-top:8px"></div><p class="note">Mỗi phiên tập trung 25 phút hoàn thành sẽ được ghi vào nhật ký (lưu trong trình duyệt này).</p></div>
+</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec__head reveal"><span class="kicker">// tài nguyên</span><h2>Nơi mình học</h2></div><div class="grid g3" data-render="resources"></div></div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

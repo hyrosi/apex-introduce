@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>CV</title>
+<meta name="description" content="CV trực tuyến, in hoặc lưu thành PDF.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="CV"><meta property="og:description" content="CV trực tuyến, in hoặc lưu thành PDF."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="cv" data-title="CV">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head"><div class="wrap"><span class="kicker reveal">// cv</span><h1 class="reveal" style="--d:.05s">Hồ sơ <span class="grad">năng lực</span></h1><p class="reveal" style="--d:.1s">Chọn kiểu trình bày, bấm In để lưu thành PDF (chọn “Lưu dưới dạng PDF”). CV luôn in nền trắng dù bạn đang dùng giao diện tối.</p></div></section>
+<section class="sec sec--tight"><div class="wrap">
+  <div class="card cv-tools no-print reveal" role="group" aria-label="Tuỳ chọn CV">
+    <div class="row" style="gap:18px"><label><input type="radio" name="cvstyle" value="modern" checked> Hiện đại</label><label><input type="radio" name="cvstyle" value="classic"> Cổ điển (ATS)</label><label><input type="checkbox" id="cvPhoto" checked> Hiện ảnh</label><label><input type="checkbox" id="cvEdit"> Sửa trực tiếp</label></div>
+    <div class="row"><a class="btn btn--ghost btn--sm" id="cvFile" hidden download>Tải file CV</a><button class="btn btn--primary btn--sm" id="cvPrint" type="button">In / Lưu PDF</button></div>
+  </div>
+  <div data-render="cv"></div>
+</div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

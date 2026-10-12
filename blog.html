@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Blog</title>
+<meta name="description" content="Ghi chú học tập và chia sẻ.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="Blog"><meta property="og:description" content="Ghi chú học tập và chia sẻ."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="blog" data-title="Blog">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head"><div class="wrap"><span class="kicker reveal">// blog</span><h1 class="reveal" style="--d:.05s">Ghi chú &amp; <span class="grad">chia sẻ</span></h1><p class="reveal" style="--d:.1s">Những điều mình học được, viết lại cho dễ nhớ.</p></div></section>
+<section class="sec sec--tight"><div class="wrap">
+  <div class="toolbar"><div class="chips" id="bchips" role="group" aria-label="Lọc theo chủ đề"></div><label class="searchbox"><span class="sr">Tìm bài viết</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input class="input" id="bq" type="search" placeholder="Tìm bài viết…" autocomplete="off"></label></div>
+  <div class="grid g2" id="bgrid"></div>
+</div></section>
+<section class="sec sec--tight"><div class="wrap"><div class="card cta reveal"><h2>Cùng tạo ra điều gì đó <span class="grad">tuyệt vời</span>?</h2><p>Có ý tưởng, dự án hay cơ hội hợp tác? Nhắn cho mình — mình luôn sẵn lòng lắng nghe.</p><div class="row"><a class="btn btn--primary" href="contact.html">Liên hệ ngay</a><a class="btn btn--ghost" href="projects.html">Xem dự án</a></div></div></div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

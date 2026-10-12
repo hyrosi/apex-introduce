@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Liên hệ</title>
+<meta name="description" content="Liên hệ để hợp tác hoặc trao đổi.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="Liên hệ"><meta property="og:description" content="Liên hệ để hợp tác hoặc trao đổi."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact" data-title="Liên hệ">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head"><div class="wrap"><span class="kicker reveal">// liên hệ</span><h1 class="reveal" style="--d:.05s">Cùng <span class="grad">trao đổi</span> nhé</h1><p class="reveal" style="--d:.1s">Điền form hoặc dùng cách liên hệ bên cạnh. <span id="cAvail"></span></p></div></section>
+<section class="sec sec--tight"><div class="wrap split" style="align-items:start">
+  <div class="grid" style="gap:14px" data-render="contactCards"></div>
+  <form class="card pad reveal" id="cForm" novalidate>
+    <h2 style="font-size:1.5rem;margin-bottom:1rem">Gửi lời nhắn</h2>
+    <div class="grid" style="gap:14px">
+      <div class="field"><label for="c_name">Họ tên</label><input class="input" id="c_name" name="name" autocomplete="name" required><span class="err" id="e_name" role="alert"></span></div>
+      <div class="field"><label for="c_email">Email</label><input class="input" id="c_email" name="email" type="email" autocomplete="email" required><span class="err" id="e_email" role="alert"></span></div>
+      <div class="field"><label for="cSubject">Chủ đề</label><select class="input" id="cSubject" name="subject"></select></div>
+      <div class="field"><label for="c_msg">Nội dung</label><textarea class="input" id="c_msg" name="message" required></textarea><span class="err" id="e_message" role="alert"></span></div>
+      <div style="position:absolute;left:-9999px" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button class="btn btn--primary" type="submit">Gửi lời nhắn →</button><div class="status" id="cStatus" role="status" aria-live="polite"></div>
+    </div>
+  </form>
+</div></section>
+<section class="sec sec--tight"><div class="wrap split" style="align-items:center"><div><div class="sec__head reveal"><span class="kicker">// kết nối</span><h2>Làm việc từ xa, kết nối khắp nơi</h2><p>Kéo để xoay địa cầu, rê chuột lên các thành phố. Múi giờ không phải là rào cản.</p></div></div><div class="card pad reveal"><div data-render="globe"></div></div></div></section>
+<section class="sec"><div class="wrap" style="max-width:820px"><div class="sec__head reveal"><span class="kicker">// câu hỏi thường gặp</span><h2>FAQ</h2></div><div data-render="faq"></div></div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Giới thiệu</title>
+<meta name="description" content="Câu chuyện, giá trị và hành trình của mình.">
+<meta name="theme-color" content="#05070d">
+<meta property="og:type" content="website"><meta property="og:title" content="Giới thiệu"><meta property="og:description" content="Câu chuyện, giá trị và hành trình của mình."><meta property="og:image" content="assets/img/og.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+/* Áp theme TRƯỚC khi vẽ trang để không bị nháy. Mặc định theo hệ thống; người dùng đổi thì ghi nhớ. */
+(function(){var d=document.documentElement;d.className='js';try{var t=JSON.parse(localStorage.getItem('apex.theme')||'null');if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';d.setAttribute('data-theme',t);var a=JSON.parse(localStorage.getItem('apex.accent')||'null');if(a)d.setAttribute('data-accent',a)}catch(e){d.setAttribute('data-theme','dark')}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="about" data-title="Giới thiệu">
+<div id="app-header"></div>
+<main id="main" tabindex="-1">
+<section class="page-head"><div class="wrap"><span class="kicker reveal">// giới thiệu</span><h1 class="reveal" style="--d:.05s">Câu chuyện <span class="grad">của mình</span></h1><p class="reveal" style="--d:.1s">Mình là ai, đang làm gì và muốn đi đến đâu.</p></div></section>
+<section class="sec sec--tight">
+  <div class="wrap split">
+    <div>
+      <div class="prose reveal" data-render="aboutText"></div>
+      <dl class="facts reveal" data-render="facts" style="margin-top:1.6rem"></dl>
+    </div>
+    <div class="frame3d tilt reveal" data-tilt="9"><img data-src="profile.aboutImage" alt="Góc làm việc" loading="lazy"><span class="cap">BUILD · LEARN · REPEAT</span></div>
+  </div>
+</section>
+<section class="sec sec--tight">
+  <div class="wrap split" style="align-items:center"><div><div class="sec__head reveal"><span class="kicker">// mô hình 3D</span><h2>Một nút thắt, nhiều góc nhìn</h2><p>Torus Knot tự sinh bằng toán học và vẽ trên Canvas. Kéo để xoay — như cách mình thích nhìn một vấn đề từ nhiều phía.</p></div></div><div class="card pad reveal"><div data-render="knot"></div></div></div>
+</section>
+<section class="sec sec--tight">
+  <div class="wrap"><div class="sec__head reveal"><span class="kicker">// giá trị</span><h2>Mình coi trọng điều gì</h2></div><div class="grid g3" data-render="values"></div></div>
+</section>
+<section class="sec">
+  <div class="wrap split" style="align-items:start">
+    <div><div class="sec__head reveal"><span class="kicker">// hành trình</span><h2>Học tập &amp; làm việc</h2></div><div data-render="timeline"></div></div>
+    <div class="card pad reveal" style="position:sticky;top:96px"><span class="kicker">// hiện tại</span><h3 style="margin:.6rem 0 .6rem;font-size:1.4rem">Mình đang…</h3><ul class="now" data-render="now"></ul></div>
+  </div>
+</section>
+<section class="sec sec--tight"><div class="wrap"><div class="card cta reveal"><h2>Cùng tạo ra điều gì đó <span class="grad">tuyệt vời</span>?</h2><p>Có ý tưởng, dự án hay cơ hội hợp tác? Nhắn cho mình — mình luôn sẵn lòng lắng nghe.</p><div class="row"><a class="btn btn--primary" href="contact.html">Liên hệ ngay</a><a class="btn btn--ghost" href="projects.html">Xem dự án</a></div></div></div></section>
+</main>
+<div id="app-footer"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:12px;text-align:center;background:#111;color:#fff;z-index:999">Trang này cần bật JavaScript để hiển thị đầy đủ nội dung.</p></noscript>
+<script src="assets/js/license.js" defer></script>
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/scene3d.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/pages.js" defer></script>
+</body>
+</html>
