@@ -1,4 +1,4 @@
-# Apex — Portfolio 3D nhiều trang
+# Apex — Portfolio hyrosi.github.io/apex-introduce
 
 Portfolio cá nhân thuần HTML/CSS/JS, sẵn sàng đưa lên GitHub Pages: 8 trang + 404 + trang mẫu, Dark/Light, 5 bảng màu, 3D (khối lõi xoay, cầu kỹ năng, coverflow, thẻ nghiêng), ⌘K, CV in PDF, góc học tập (kế hoạch, checklist, Pomodoro, nhật ký), blog, form liên hệ.
 
